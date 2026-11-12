@@ -34,12 +34,12 @@ No `npm install` is needed. The checks cover pagination, date windows, bot/self-
 
 ## Repository and hosting
 
-[GitHub repository](https://github.com/zachdougherty98-cyber/repo-signal-prospecting) · [GitHub Pages](https://zachdougherty98-cyber.github.io/repo-signal-prospecting/)
+[GitHub repository](https://github.com/zach-greptilian/repo-signal-prospecting) · [GitHub Pages](https://zach-greptilian.github.io/repo-signal-prospecting/)
 
 Clone the project:
 
 ```sh
-git clone https://github.com/zachdougherty98-cyber/repo-signal-prospecting.git
+git clone https://github.com/zach-greptilian/repo-signal-prospecting.git
 cd repo-signal-prospecting
 ```
 
