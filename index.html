@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Turn public GitHub activity into evidence-led prospect research and better sales conversations.">
+  <meta name="theme-color" content="#f6f7f3">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./src/style.css">
+  <title>Repo Signal — GitHub prospect research</title>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="./" aria-label="Repo Signal home"><span class="brand-icon">↗</span> repo<span class="brand-light">signal</span><span class="brand-dot"></span></a>
+    <div class="workspace"><span class="workspace-avatar">G</span><span>Sales workspace<small>Built for Greptile discovery</small></span></div>
+    <div class="nav-label">WORKSPACE</div>
+    <nav aria-label="Main navigation">
+      <button class="nav-item active" id="nav-research"><span aria-hidden="true">⌕</span> Prospect research <span class="nav-badge">01</span></button>
+      <button class="nav-item" id="nav-saved"><span aria-hidden="true">▤</span> Saved briefs <span class="nav-count" id="saved-count">0</span></button>
+      <button class="nav-item" id="nav-method"><span aria-hidden="true">◎</span> How it works</button>
+    </nav>
+    <div class="sidebar-bottom"><div class="mini-mark">⌘</div><strong>Better context.<br>Better conversations.</strong><p>Public engineering signals.<br>A thoughtful place to start.</p><span class="independent">Independent side project<br>Not an official Greptile product</span></div>
+  </aside>
+  <div class="app-shell">
+    <header class="topbar"><span>Workspace <span class="slash">/</span> <strong>Prospect research</strong></span><button class="text-button mobile-saved" id="mobile-saved">Saved briefs</button><span class="public-pill"><i></i> Public GitHub data</span></header>
+    <main id="main">
+      <section class="intro"><div><div class="eyebrow"><span class="tiny-square"></span> ENGINEERING SIGNALS → SALES CONTEXT</div><h1>A little research.<br>A better first conversation.</h1><p>Turn a company’s public GitHub activity into a useful sales brief.</p></div><div class="intro-note"><span>01 / DISCOVER</span><p>Find the signal<br>before you reach out.</p><svg width="110" height="46" viewBox="0 0 110 46" aria-hidden="true"><path d="M0 33h17l8-17 12 25 14-37 13 25 9-12 8 16h29" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></div></section>
+      <section class="search-card" aria-label="Research a GitHub organization">
+        <form id="research-form"><label for="organization">Start with a GitHub organization</label><div class="search-row"><div class="input-wrap"><span aria-hidden="true">⌕</span><input id="organization" name="organization" autocomplete="off" spellcheck="false" placeholder="github.com / company" aria-describedby="search-help" required maxlength="200"></div><button class="primary" type="submit" id="analyze-button">Research company <span aria-hidden="true">↗</span></button><button class="secondary hidden" type="button" id="cancel-button">Cancel</button></div><div class="search-meta"><p id="search-help">Public organizations only. Up to 3 active repositories. Last 30 days.</p><button type="button" class="text-button" id="demo-button">Explore sample brief <span aria-hidden="true">→</span></button></div></form>
+        <div id="progress" class="progress hidden" role="status"><span class="spinner"></span><span id="progress-text">Reading public GitHub data…</span></div><div id="error" class="error hidden" role="alert"></div>
+      </section>
+      <section id="saved-panel" class="panel hidden" aria-label="Saved briefs"><div class="section-heading"><h2>Saved briefs</h2><button class="text-button" id="close-saved">Close ×</button></div><p class="muted">Stored in this browser only.</p><div id="saved-list"></div></section>
+      <section id="results" aria-label="Company research brief"></section>
+      <details class="methodology" id="methodology"><summary>How this research works <span>Scope, sources & limitations</span></summary><div id="methodology-body"></div></details>
+      <footer><span><span class="footer-dot"></span> Evidence first. Curiosity always.</span><span>repo signal <span class="slash">/</span> v1.0</span></footer>
+    </main>
+  </div>
+  <div class="toast hidden" id="toast" role="status"></div>
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>
