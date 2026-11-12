@@ -32,18 +32,20 @@ npm test
 
 No `npm install` is needed. The checks cover pagination, date windows, bot/self-review exclusion, missing data, cancellation, partial failures, and complete mocked research requests.
 
-## Publish on GitHub
+## Repository and hosting
 
-Create a new repository called `repo-signal-prospecting` in your GitHub account, then push this project:
+[GitHub repository](https://github.com/zachdougherty98-cyber/repo-signal-prospecting) · [GitHub Pages](https://zachdougherty98-cyber.github.io/repo-signal-prospecting/)
+
+Clone the project:
 
 ```sh
-git remote add origin https://github.com/YOUR-USERNAME/repo-signal-prospecting.git
-git push -u origin main
+git clone https://github.com/zachdougherty98-cyber/repo-signal-prospecting.git
+cd repo-signal-prospecting
 ```
 
-The local project is already initialized with an initial commit. Replace `YOUR-USERNAME` with your account name. Use your usual GitHub authentication; never add credentials to source files.
+Pages is configured to use **GitHub Actions**. Every push to `main` runs the checks and publishes only the app files. You can also run **Publish GitHub Pages** manually from the Actions tab. Use the URL shown by a successful deployment as the authoritative live address.
 
-For a live site, go to **Settings → Pages → Build and deployment → Source → GitHub Actions**. Run the **Publish GitHub Pages** workflow from Actions if the initial push happened before Pages was enabled. The included workflow runs the checks and deploys only the app files. On a public repository the usual URL is `https://YOUR-USERNAME.github.io/repo-signal-prospecting/`; use the URL returned by the workflow as the authoritative result.
+When deploying a fork, enable **Settings → Pages → Build and deployment → Source → GitHub Actions**, then run the publishing workflow. All app asset paths are relative, so repository subpaths work without a build-time base URL.
 
 ## Test Greptile
 
